@@ -12,6 +12,18 @@ o simples comando `sed 's/sp$//g' fb_XXXdict.dic > novo_dict.dic`. Os
 dicionários também foram ordenado em ordem alfabética de acordo com o valor
 ASCII dos caracteres com o comando `LC_ALL=C sort dic > fb_XXXdict.dic`.
 
+No total, os dicionários consistem em 640.390 palavras. As listas de palavras
+utilizadas são provenientes das seguintes fontes:
+
+- [Projeto Natura](http://natura.di.uminho.pt/wiki/doku.php), da Universidade do
+Minho; 
+- [VERO](https://pt-br.libreoffice.org/projetos/vero/), verificador ortográfico
+do LibreOffice;
+- [Dicio](https://www.dicio.com.br/), dicionário online de Português pertencente
+à empresa 7Graus;
+- Corpus CETENFolha e demais bases de texto utilizadas para gerar o modelo de
+linguagem trigrama disponibilizado pelo Grupo FalaBrasil.
+
 - __HTK__: 
 Abaixo, exemplo de palavras do dicionário são mostradas, seguidas das suas
 respectivas transcrições. A ordenação das palavras baseada no valor ASCII é 
