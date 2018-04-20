@@ -55,18 +55,19 @@ dicionário fonético, conforme visto abaixo:
 >Sphinxtrain doesn’t support some special characters like "\*" or "/"  
 >To be safe we recommend you to use alphanumeric-only phone-set.
 
-```
-<s>          SIL
-</s>         SIL
-<sil>        SIL
-árvore       a rm v o r i sp
-coração      k o r a s aa ww sp
-ética        em ts i k a sp
-história     i s t om r i a sp
-índio        ii dz i u sp
-órgão        om rm g aa ww sp
-palhinha     p a lm ii jm a sp
-```
+| .dict                            | .filler     | .phone |
+| -------------------------------- | ----------- |:------:|
+|`<s>          SIL               ` | `<s>   SIL` | `k`    | 
+|`</s>         SIL               ` | `</s>  SIL` | `jm`   |
+|`<sil>        SIL               ` | `<sil> SIL` | `r`    |
+|`coração      k o r a s aa ww sp` |             | `uu`   | 
+|`história     i s t om r i a sp ` |             | `ts`   |
+|`palhinha     p a lm ii jm a sp ` |             | `jj`   |
+|`árvore       a rm v o r i sp   ` |             | `ww`   |
+|`ética        em ts i k a sp    ` |             | `a`    |
+|`índio        ii dz i u sp      ` |             | `aa`   |
+|`órgão        om rm g aa ww sp  ` |             | ...    |
+
 
 ### Kaldi
 Coming soon.
