@@ -1,8 +1,8 @@
-# Dicionários Fonéticos e Conversão G2P
+# Dicionários Fonéticos e Conversor G2P
 Dicionários fonéticos e _software_ conversor grafema-fonema (g2p)
 disponibilizadas de forma gratuita<sup>\*</sup> pelo Grupo FalaBrasil.
 
-<sup>\*</sup>Informações sobre a licença no arquivo _LICENSE_
+<sup>\*</sup>Informações sobre a licença no arquivo _LICENSE_.
 
 ## Dicionários Fonéticos
 Os dicionários fonéticos contém ao todo 40 fonemas (38, mais um modelo de
@@ -12,9 +12,13 @@ o simples comando `sed 's/sp$//g' fb_XXXdict.dic > novo_dict.dic`. Os
 dicionários também foram ordenado em ordem alfabética de acordo com o valor
 ASCII dos caracteres com o comando `LC_ALL=C sort dic > fb_XXXdict.dic`.
 
-- [HTK](http://htk.eng.cam.ac.uk/):
+- __HTK__: 
 Abaixo, exemplo de palavras do dicionário são mostradas, seguidas das suas
-respectivas transcrições.
+respectivas transcrições. A ordenação das palavras baseada no valor ASCII é 
+importante para o HTK para evitar erros como, por exemplo, o retornado pelo
+HDMan.
+
+> HDMan ERROR [+1452] ReadDictProns: word 'acaso' out of order in dict dict.dic
 
 ```
 </s>     []  sil 
@@ -30,9 +34,13 @@ sil          sil
 órgão        O R g a~ w~ sp
 ```
 
-- [CMU Sphinx](https://cmusphinx.github.io/)
->Do not use case-sensitive variants like "e" and "E". 
->Sphinxtrain doesn’t support some special characters like "\*" or "/"
+- __Sphinx__: 
+O [tutorial](https://cmusphinx.github.io/wiki/tutorialam/) para treino do modelo
+acústico com o pacote SphinxTrain deixa claro algumas condições sobre o
+dicionário fonético, conforme visto abaixo:
+
+>Do not use case-sensitive variants like "e" and "E".   
+>Sphinxtrain doesn’t support some special characters like "\*" or "/"  
 >To be safe we recommend you to use alphanumeric-only phone-set.
 
 ```
@@ -48,7 +56,9 @@ história     i s t om r i a sp
 palhinha     p a lm ii jm a sp
 ```
 
-- [Kaldi](http://kaldi-asr.org/)
+- __Kaldi__: 
+Coming soon.
+
 ```
 </s>         sil
 <s>          sil
@@ -65,7 +75,6 @@ sil          sil
 
 ## Conversor Grafema-Fonema (G2P)
 Coming soon.
-
 
 __Copyright 2005-2018 Grupo FalaBrasil__   
 __Universidade Federal do Pará__
