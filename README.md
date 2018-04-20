@@ -24,7 +24,7 @@ do LibreOffice;
 - Corpus CETENFolha e demais bases de texto utilizadas para gerar o modelo de
 linguagem trigrama disponibilizado pelo Grupo FalaBrasil.
 
-- __HTK__: 
+### HTK
 Abaixo, exemplo de palavras do dicionário são mostradas, seguidas das suas
 respectivas transcrições. A ordenação das palavras baseada no valor ASCII é 
 importante para o HTK para evitar erros como, por exemplo, o retornado pelo
@@ -46,7 +46,7 @@ sil          sil
 órgão        O R g a~ w~ sp
 ```
 
-- __Sphinx__: 
+### CMU Sphinx
 O [tutorial](https://cmusphinx.github.io/wiki/tutorialam/) para treino do modelo
 acústico com o pacote SphinxTrain deixa claro algumas condições sobre o
 dicionário fonético, conforme visto abaixo:
@@ -68,7 +68,7 @@ história     i s t om r i a sp
 palhinha     p a lm ii jm a sp
 ```
 
-- __Kaldi__: 
+### Kaldi
 Coming soon.
 
 ```
