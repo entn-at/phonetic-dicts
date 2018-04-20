@@ -57,16 +57,16 @@ dicionário fonético, conforme visto abaixo:
 
 | .dict                            | .filler     | .phone |
 | -------------------------------- | ----------- |:------:|
-|`<s>          SIL               ` | `<s>   SIL` | `k`    | 
-|`</s>         SIL               ` | `</s>  SIL` | `jm`   |
-|`<sil>        SIL               ` | `<sil> SIL` | `r`    |
-|`coração      k o r a s aa ww sp` |             | `uu`   | 
-|`história     i s t om r i a sp ` |             | `ts`   |
-|`palhinha     p a lm ii jm a sp ` |             | `jj`   |
-|`árvore       a rm v o r i sp   ` |             | `ww`   |
-|`ética        em ts i k a sp    ` |             | `a`    |
-|`índio        ii dz i u sp      ` |             | `aa`   |
-|`órgão        om rm g aa ww sp  ` |             | ...    |
+|`<s>          SIL               `<br/> | `<s>   SIL` | `k`    | 
+|`</s>         SIL               `<br/> | `</s>  SIL` | `jm`   |
+|`<sil>        SIL               `<br/> | `<sil> SIL` | `r`    |
+|`coração      k o r a s aa ww sp`<br/> |             | `uu`   | 
+|`história     i s t om r i a sp `<br/> |             | `ts`   |
+|`palhinha     p a lm ii jm a sp `<br/> |             | `jj`   |
+|`árvore       a rm v o r i sp   `<br/> |             | `ww`   |
+|`ética        em ts i k a sp    `<br/> |             | `a`    |
+|`índio        ii dz i u sp      `<br/> |             | `aa`   |
+|`órgão        om rm g aa ww sp  `<br/> |             | ...    |
 
 
 ### Kaldi
