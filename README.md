@@ -32,19 +32,19 @@ HDMan.
 
 > HDMan ERROR [+1452] ReadDictProns: word 'acaso' out of order in dict dict.dic
 
-```
-</s>     []  sil 
-<s>      []  sil 
-<unk>    []  sil 
-coração      k o r a s a~ w~ sp
-história     i s t O r i a sp 
-palhinha     p a L i~ J a sp
-sil          sil
-árvore       a R v o r i sp
-ética        E tS i k a sp 
-índio        i~ dZ i u sp 
-órgão        O R g a~ w~ sp
-```
+| .dic                             | monophones0 |
+| -------------------------------- |:------------:
+|`</s>     []  sil               ` |  `E`        |             
+|`<s>      []  sil               ` |  `J`        |                
+|`<unk>    []  sil               ` |  `L`        |                              
+|`coração      k o r a s a~ w~ sp` |  `O`        |                               
+|`história     i s t O r i a sp  ` |  `R`        |                          
+|`palhinha     p a L i~ J a sp   ` |  `S`        |                         
+|`sil          sil               ` |  `X`        |                           
+|`árvore       a R v o r i sp    ` |  `Z`        |                   
+|`ética        E tS i k a sp     ` |  `a`        |                       
+|`índio        i~ dZ i u sp      ` |  `a~`       |                
+|`órgão        O R g a~ w~ sp    ` |  `...`      |             
 
 ### CMU Sphinx
 O [tutorial](https://cmusphinx.github.io/wiki/tutorialam/) para treino do modelo
@@ -57,34 +57,34 @@ dicionário fonético, conforme visto abaixo:
 
 | .dict                            | .filler     | .phone |
 | -------------------------------- | ----------- |:------:|
-|`<s>          SIL               `<br/> | `<s>   SIL` | `k`    | 
-|`</s>         SIL               `<br/> | `</s>  SIL` | `jm`   |
-|`<sil>        SIL               `<br/> | `<sil> SIL` | `r`    |
-|`coração      k o r a s aa ww sp`<br/> |             | `uu`   | 
-|`história     i s t om r i a sp `<br/> |             | `ts`   |
-|`palhinha     p a lm ii jm a sp `<br/> |             | `jj`   |
-|`árvore       a rm v o r i sp   `<br/> |             | `ww`   |
-|`ética        em ts i k a sp    `<br/> |             | `a`    |
-|`índio        ii dz i u sp      `<br/> |             | `aa`   |
-|`órgão        om rm g aa ww sp  `<br/> |             | ...    |
+|`<s>          SIL               ` | `<s>   SIL` | `SIL`  | 
+|`</s>         SIL               ` | `</s>  SIL` | `a`    |
+|`<sil>        SIL               ` | `<sil> SIL` | `aa`   |
+|`coração      k o r a s aa ww sp` |             | `b`    | 
+|`história     i s t om r i a sp ` |             | `d`    |
+|`palhinha     p a lm ii jm a sp ` |             | `dz`   |
+|`árvore       a rm v o r i sp   ` |             | `e`    |
+|`ética        em ts i k a sp    ` |             | `ee`   |
+|`índio        ii dz i u sp      ` |             | `aa`   |
+|`órgão        om rm g aa ww sp  ` |             | ...    |
 
 
 ### Kaldi
 Coming soon.
 
-```
-</s>         sil
-<s>          sil
-<unk>        sil 
-árvore       a R v o r i sp 
-coração      k o r a s a~ w~ sp 
-ética        E tS i k a sp 
-história     i s t O r i a sp 
-índio        i~ dZ i u sp 
-órgão        O R g a~ w~ sp 
-palhinha     p a L i~ J a sp 
-sil          sil
-```
+| lexicon                         |  ...  |
+| ------------------------------- |:-----:|
+`</s>         sil               ` | `E`   |                  
+`<s>          sil               ` | `J`   |                      
+`<unk>        sil               ` | `L`   |                              
+`árvore       a R v o r i sp    ` | `O`   |                                
+`coração      k o r a s a~ w~ sp` | `R`   |                               
+`ética        E tS i k a sp     ` | `S`   |                             
+`história     i s t O r i a sp  ` | `X`   |                                          
+`índio        i~ dZ i u sp      ` | `Z`   |                                           
+`órgão        O R g a~ w~ sp    ` | `a`   |                                        
+`palhinha     p a L i~ J a sp   ` | `a~`  |                                     
+`sil          sil               ` | `...` |   
 
 ## Conversor Grafema-Fonema (G2P)
 Coming soon.
