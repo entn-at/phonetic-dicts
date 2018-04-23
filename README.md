@@ -97,8 +97,18 @@ Coming soon.
 '---------------------------------'-------'
 ```
 
-## Conversor Grafema-Fonema (G2P)
-Coming soon.
+### Conversor Grafema-Fonema (G2P)
+Compilação feita em versão `javac 1.8.0_162`.
+
+Para compilar o arquivo de teste, no diretório g2p utilizar o comando `javac -cp
+".:g2p.jar" Testfile.java`.
+
+E para rodar o arquivo de teste, no diretório anterior ao g2p/ utilizar o
+comando `java -cp ".:g2p/g2p.jar" g2p.Testfile`
+
+Caso você altere a localização da lib, no momento de utilizar os comandos de
+compilar e executar, troque `".:g2p/g2p.jar` por
+`".:/caminho/absoluto/para/lib.jar"`.
 
 __Copyright 2005-2018 Grupo FalaBrasil__   
 __Universidade Federal do Pará__
