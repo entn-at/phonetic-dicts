@@ -1,24 +1,13 @@
 package g2p;
 
-import java.util.Scanner;
-import voxlaps.voxlib.GraphemeToPhoneme;
+import falabrasil.g2p.GraphemeToPhoneme;//importa conteúdo da biblioteca g2plib
 
 public class Testfile{
   public static void main(String[] args){
 
-    Scanner tec = new Scanner(System.in);
-    GraphemeToPhoneme fons = new GraphemeToPhoneme();
+    GraphemeToPhoneme fons = new GraphemeToPhoneme();//instancia objeto para usar os métodos da biblioteca g2plib
 
-    final String parada = "halt";
-    String txt = "";
-
-    System.out.println("'"+parada+"'"+" para encerrar a execução deste arquivo de teste.");
-
-    while(!txt.equals(parada)){
-      txt = tec.nextLine();
-      if(!txt.equals(parada))
-        System.out.println("Fonemas: "+fons.graphToPhon(txt));
-    }
+    System.out.println("Fonemas: "+fons.g2p(args[0]));//escreve fonemas da primeira palavra passada como parâmetro na tela usando método g2p()
   }
 
 }
