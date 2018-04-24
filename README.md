@@ -99,21 +99,22 @@ Coming soon.
 
 ### Conversor Grafema-Fonema (G2P)
 Compilação feita em versão `javac 1.8.0_162`.    
-Instalação de dependências no Ubuntu/Debian:
+Instalação de dependências no Ubuntu/Debian:   
 ```
 sudo apt-get install openjdk-8-jdk
 sudo apt-get install openjdk-8-jre
 ```
 
-Compilação e execução do arquivo de teste, presente no diretório `g2p/`:
+Compilação e execução do arquivo de teste, presente no diretório `g2p/`:   
 ```
 javac -cp ".:g2plib.jar" TestG2P.java
 java -cp ".:g2p/g2plib.jar" g2p.TestG2P <PALAVRA>
 ```
 
-`"PALAVRA"` é qualquer palavra da língua Português brasileiro com apenas
+`<PALAVRA>` é qualquer palavra da língua Português brasileiro com apenas
 caracteres caixa baixa. Caso a localização da lib seja alterada, basta apenas
 alterar o _classpath_ de `".:g2p/g2p.jar"` por `".:/absolute/path/to/lib.jar"`.
+
 
 __Copyright 2005-2018 Grupo FalaBrasil__   
 __Universidade Federal do Pará__
