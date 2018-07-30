@@ -107,12 +107,17 @@ sudo apt-get install openjdk-8-jre
 
 Compilação e execução do arquivo de teste, presente no diretório `g2p/`:   
 ```
-javac -cp ".:g2plib.jar" TestG2P.java
-java -cp ".:g2p/g2plib.jar" g2p.TestG2P <PALAVRA>
+javac -cp ".:g2p/*" TestG2P.java
+java -cp ".:g2p/*" g2p.TestG2P -w <PALAVRA>
+	ou
+java -cp ".:g2p/*" g2p.TestG2p -f <ENTRADA> <SAIDA>
 ```
 
 `<PALAVRA>` é qualquer palavra da língua Português brasileiro com apenas
-caracteres caixa baixa. Caso a localização da lib seja alterada, basta apenas
+caracteres caixa baixa. 
+`<ENTRADA>` é um arquivo com um palavra por linha e 
+`<SAIDA>` é o arquivo destino dos fonemas gerados
+Caso a localização da lib seja alterada, basta apenas
 alterar o _classpath_ de `".:g2p/g2p.jar"` por `".:/absolute/path/to/lib.jar"`.
 
 
