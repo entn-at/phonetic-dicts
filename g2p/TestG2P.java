@@ -11,13 +11,19 @@ import falabrasil.g2p.GraphemeToPhoneme;
 
 public class TestG2P {
 	public static void main(String[] args) {
-		if(args.length < 1) {
+		if(args.length <= 1) {
 			System.err.println("Grupo FalaBrasil");
 			System.out.println("Conversor Grafema-Fonema (G2P)\n");
-			System.err.println("Usage: java -cp \".:g2p/g2plib.jar\" " +
-					"g2p.TestG2P <PALAVRA>");
+			System.err.println("Usage 1: java -cp \".:g2p/*\" " +
+					"g2p.TestG2P -w <PALAVRA>");
 			System.err.println("\t<PALAVRA> é qualquer palavra " + 
 					"do Português Brasileiro");
+			System.err.println("Usage 2: java -cp \".:g2p/*\" " + 
+					"g2p.TestG2P -f <ENTRADA> <SAIDA>");
+			System.err.println("\t<ENTRADA> é qualquer arquivo com uma "+
+					"palavra por linha");
+			System.err.println("\t<SAIDA> é o arquivo destino para os "+
+					"fonemas gerados");
 			System.exit(1);
 		}
 
@@ -39,8 +45,8 @@ public class TestG2P {
 				
 				String source = dir.getCanonicalPath() + File.separator +
 				args[1];
+				System.out.println(args[2]);
 				String dest = dir.getCanonicalPath() + File.separator+args[2];
-				
 				File fin = new File(source);
 				FileInputStream fis = new FileInputStream(fin);
 				BufferedReader in = new BufferedReader (new InputStreamReader(fis));
@@ -50,7 +56,6 @@ public class TestG2P {
 				String aLine = null;
 				while ((aLine = in.readLine()) != null) {
 					aLine = aLine +"\t" + phones.g2p(aLine);
-					System.out.println(aLine);
 					out.write(aLine);
 					out.newLine();
 				}
@@ -63,6 +68,7 @@ public class TestG2P {
 		/* escreve fonemas da primeira palavra passada como parâmetro na tela usando método g2p() */
 		} catch(Exception e){
 			System.out.println(e.getMessage());
+			System.out.println("uhuhhuh");
 		}
 	}
 }
