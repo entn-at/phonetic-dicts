@@ -1,5 +1,10 @@
 package g2p;
 import org.apache.commons.cli.*;
+import java.io.ByteArrayInputStream;                                           
+import java.io.File;                                                
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.io.*;  
 
 /* importa conteúdo da biblioteca g2plib */
 import falabrasil.g2p.GraphemeToPhoneme;
@@ -28,6 +33,24 @@ public class TestG2P {
 			GraphemeToPhoneme phones = new GraphemeToPhoneme();
 			if(cmd.hasOption("w")){
 				System.out.println(args[1] + "\t" + phones.g2p(args[1]));
+			}
+			if(cmd.hasOption("f")){
+				File dir = new File("");
+				
+				String source = dir.getCanonicalPath() + File.separator +
+				args[1];
+				String dest = dir.getCanonicalPath() + File.separator + 
+				args[2];
+				
+				File fin = new File(source);
+				FileInputStream fis = new FileInputStream(fin);
+				BufferedReader in = new BufferedReader (new InputStreamReader(fis));
+				
+				
+				String aLine = null;
+				while ((aLine = in.readLine()) != null) {
+					System.out.println(aLine +"\t" + phones.g2p(aLine));
+				}
 			}
 
 		/* instancia objeto para usar os métodos da biblioteca g2plib */
