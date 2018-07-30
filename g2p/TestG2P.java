@@ -39,18 +39,23 @@ public class TestG2P {
 				
 				String source = dir.getCanonicalPath() + File.separator +
 				args[1];
-				String dest = dir.getCanonicalPath() + File.separator + 
-				args[2];
+				String dest = dir.getCanonicalPath() + File.separator+args[2];
 				
 				File fin = new File(source);
 				FileInputStream fis = new FileInputStream(fin);
 				BufferedReader in = new BufferedReader (new InputStreamReader(fis));
-				
+				FileWriter fstream = new FileWriter(dest, true);
+				BufferedWriter out = new BufferedWriter(fstream);
 				
 				String aLine = null;
 				while ((aLine = in.readLine()) != null) {
-					System.out.println(aLine +"\t" + phones.g2p(aLine));
+					aLine = aLine +"\t" + phones.g2p(aLine);
+					System.out.println(aLine);
+					out.write(aLine);
+					out.newLine();
 				}
+				in.close();
+				out.close();
 			}
 
 		/* instancia objeto para usar os métodos da biblioteca g2plib */
