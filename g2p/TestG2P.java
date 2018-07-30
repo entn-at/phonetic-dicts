@@ -24,6 +24,9 @@ public class TestG2P {
 		
 			/* instancia objeto para usar os métodos da biblioteca g2plib */
 			GraphemeToPhoneme phones = new GraphemeToPhoneme();
+			if((cmd.hasOption("w")) && (cmd.hasOption("f"))){
+				throw new java.lang.RuntimeException("");
+			}
 			if(cmd.hasOption("w")){
 				System.out.println(args[1] + "\t" + phones.g2p(args[1]));
 			}
@@ -49,8 +52,7 @@ public class TestG2P {
 				out.close();
 			}
 			else{
-				/* Force exception */
-				System.out.println(args[1]);
+				throw new java.lang.RuntimeException("");
 			}
 
 		} catch(Exception e){
