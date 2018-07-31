@@ -105,20 +105,23 @@ sudo apt-get install openjdk-8-jdk
 sudo apt-get install openjdk-8-jre
 ```
 
-Compilação e execução do arquivo de teste, presente no diretório `g2p/`:   
+Compilação do arquivo de teste, presente no diretório `g2p/`:   
 ```
 javac -cp ".:g2p/*" TestG2P.java
-java -cp ".:g2p/*" g2p.TestG2P -w <PALAVRA>
-	ou
-java -cp ".:g2p/*" g2p.TestG2p -f <ENTRADA> <SAIDA>
+```
+
+Execução do arquivo de teste, presente no diretório `g2p/`:   
+```
+java  -cp ".:g2p/*" g2p.TestG2P [-w <PALAVRA> | -f <ENTRADA.list> <SAIDA.dict>]
 ```
 
 `<PALAVRA>` é qualquer palavra da língua Português brasileiro com apenas
-caracteres caixa baixa. 
-`<ENTRADA>` é um arquivo com um palavra por linha e 
-`<SAIDA>` é o arquivo destino dos fonemas gerados
-Caso a localização da lib seja alterada, basta apenas
-alterar o _classpath_ de `".:g2p/g2p.jar"` por `".:/absolute/path/to/lib.jar"`.
+caracteres caixa baixa.     
+`<ENTRADA.list>` é um arquivo com um palavra por linha e     
+`<SAIDA.dict>` é o arquivo destino dos fonemas gerados.
+
+Caso a localização da lib seja alterada, basta apenas alterar o _classpath_ de
+`".:g2p/*.jar"` por `".:/absolute/path/to/lib.jar"`.
 
 
 __Copyright 2005-2018 Grupo FalaBrasil__   
